@@ -6,14 +6,9 @@
         <title>Survey Form | FreeCodeCamp-Ezeko</title>
         <link rel="icon" type="image/jpg" href="31517324.jpg">
         <style>
-            body{
-                display:flex;
-                background-color:rgb(25, 29, 6);
-            }
+            
             .container{
-                width:100%;
-                display:flex;
-                margin:auto;
+                display: block;
                 padding-left: 15%;
                 padding-right: 15%;
                 
@@ -21,20 +16,47 @@
             #title{
                 font-size:100px;
                 color:blueviolet;
+                text-align: center;
                 font-family:monospace;
+            }
+            input{
+                border-top-width:3px;
+                width: 100%;
+                height: 25px;
+                margin-bottom: 10px;
+            }
+            #description{
+                font-size:35px;
+                text-align: center;
+            }
+            label{
+                font-size:24px;
+                color:rgb(53, 22, 190);
             }
         </style>
     </head>
     <body>
+    <main>
         <div class="container">
             <h1 id="title">Survey Form</h1>
             <p id="description">This is a Survey Form</p>
             <form id="survey-form">
-                <label for="name">Name :</label>
-                <input type="text" id="name" placeholder="enter your name here">
-                <input type="email" id="email" placeholder="Enter your valid email">
+                <label for="name" id="name-label">Name :</label>
+                <input type="text" id="name" placeholder="Enter your name here" required>
+                <label for="email" id="email-label"> Email:</label>
+                <input type="email" id="email" placeholder="Enter your valid email" required>
+                <label for="number" id="number-label">Number:</label>
+                <input type="number" minlength="4" maxlength="10" id="number" placeholder="INPUT number here" required>
+                <select id="select-item">
+                    <option>Good Review</option>
+                    <option>Bad Review</option>
+                </select>
+                <label for="gender">Gender</label>
+                <input type="radio" value="male"> male
+                <input type="radio"> Female
             </form>
 
         </div>
+    </main>
     </body>
 </html>
