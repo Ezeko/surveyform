@@ -6,14 +6,35 @@
         <title>Survey Form | FreeCodeCamp-Ezeko</title>
         <link rel="icon" type="image/jpg" href="31517324.jpg">
         <style>
+            body{
+                display:flex;
+                background-color:rgb(25, 29, 6);
+            }
             .container{
                 width:100%;
+                display:flex;
+                margin:auto;
+                padding-left: 15%;
+                padding-right: 15%;
+                
+            }
+            #title{
+                font-size:100px;
+                color:blueviolet;
+                font-family:monospace;
             }
         </style>
     </head>
     <body>
         <div class="container">
             <h1 id="title">Survey Form</h1>
+            <p id="description">This is a Survey Form</p>
+            <form id="survey-form">
+                <label for="name">Name :</label>
+                <input type="text" id="name" placeholder="enter your name here">
+                <input type="email" id="email" placeholder="Enter your valid email">
+            </form>
+
         </div>
     </body>
 </html>
