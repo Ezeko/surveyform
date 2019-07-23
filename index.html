@@ -2,16 +2,34 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width initial-scale=1">
-        <meta name="description" content="responsive survey form made by adejobi ezekiel">
+        <meta name="description" content="responsive survey form made by adejobi ezekiel, responsive registration page template, made in nigeria">
+        <meta name="keyword" content="Ezekielcodes, responsive web form, 100days of coding, Adejobi Ezekiel, Ezekoconcept, ezeko, FreeCodeCamp-Ezeko, css template, registration form, registration template">
         <title>Survey Form | FreeCodeCamp-Ezeko</title>
         <link rel="icon" type="image/jpg" href="31517324.jpg">
         <style>
-            
-            .container{
+            body{
+                background-color: blanchedalmond;
+            }
+            @media (max-width:720px){
+                .container{
                 display: block;
+                width:98%;
+                padding-left:1%;
+                padding-right:1%;
+
+            }
+            }
+            @media (min-width:1200px){
+            .container{
+                display: inherit;
                 padding-left: 15%;
                 padding-right: 15%;
                 
+            }}
+            #select-item{
+                height: 35px;
+                width: 60%;
+                margin-bottom: 10px;
             }
             #title{
                 font-size:100px;
@@ -19,6 +37,25 @@
                 text-align: center;
                 font-family:monospace;
             }
+            #gender-type{
+                display: flex;
+            
+            }
+            #checkbox-detail1{
+                display: flex;
+                flex-shrink:flex-end;
+                
+            }
+            button{
+                background-color: green;
+                color:hotpink;
+                width:45%;
+                height: 50px;
+                float: right;
+                font-size: 45px;
+               padding-bottom: 10px;
+            }
+            
             input{
                 border-top-width:3px;
                 width: 100%;
@@ -28,10 +65,15 @@
             #description{
                 font-size:35px;
                 text-align: center;
+                color:darkgreen;
             }
             label{
                 font-size:24px;
                 color:rgb(53, 22, 190);
+            }
+            #comment{
+             display: block;
+             margin-bottom: 10px;
             }
         </style>
     </head>
@@ -48,12 +90,20 @@
                 <label for="number" id="number-label">Number:</label>
                 <input type="number" minlength="4" maxlength="10" id="number" placeholder="INPUT number here" required>
                 <select id="select-item">
+                    <option>What is your experience using this page?</option>
                     <option>Good Review</option>
                     <option>Bad Review</option>
-                </select>
-                <label for="gender">Gender</label>
-                <input type="radio" value="male"> male
-                <input type="radio"> Female
+                </select><br>
+                <label for="gender" id="gender">Gender</label>
+                <p id="gender-type"><input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" > Female</p><br>
+                <label for="checkbox">What do you need from us?</label>
+                <p id="checkbox-detail1"><input type="checkbox" value="Food"> Food
+                <input type="checkbox" value="Money"> Money
+                <input type="checkbox" value="CLOTHINGS"> Clothings</p><br>
+                <label for="comment" id="comment">More Comments? Put it below:</label>
+                <textarea cols="60" rows="10"></textarea><br>
+                <button id="submit">Submit</button>
             </form>
 
         </div>
