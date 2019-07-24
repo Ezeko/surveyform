@@ -67,6 +67,11 @@
                 text-align: center;
                 color:darkgreen;
             }
+            footer{
+                padding: 10px;
+                margin:10px;
+                float:right;
+            }
             label{
                 font-size:24px;
                 color:rgb(53, 22, 190);
@@ -74,6 +79,10 @@
             #comment{
              display: block;
              margin-bottom: 10px;
+            }
+            #textarea{
+                 width: 50%;
+                 height: 200px;
             }
         </style>
     </head>
@@ -102,8 +111,8 @@
                 <input type="checkbox" value="Money"> Money
                 <input type="checkbox" value="CLOTHINGS"> Clothings</p><br>
                 <label for="comment" id="comment">More Comments? Put it below:</label>
-                <textarea cols="60" rows="10"></textarea><br>
-                <button id="submit">Submit</button>
+                <textarea id="textarea"></textarea><br>
+                <button id="submit">Submit</button><br>
             </form>
 
         </div>
